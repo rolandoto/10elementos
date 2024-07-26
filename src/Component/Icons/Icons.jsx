@@ -6,7 +6,7 @@ import { BsSafe  } from "react-icons/bs";
 import { PiShowerLight } from "react-icons/pi";
 import { PiTowelLight } from "react-icons/pi";
 import { CiCircleCheck } from "react-icons/ci";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaCheckCircle, FaWhatsapp } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -246,4 +246,10 @@ export const IconsRiBankFill =() =>{
 export const IconsMdEmail =({color}) =>{
     return <MdOutlineEmail   color={color} className="mr-2" fontSize={30}  />
 }
+
+
+export const IconFaCheckCircle  =({color}) =>{
+    return <FaCheckCircle  color={color} className="mr-2" fontSize={70}  />
+}
+
 
