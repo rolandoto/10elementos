@@ -106,7 +106,6 @@ const Accommodation = () => {
     }
 
 
-    
 
     const {RoomsGetPromotions,loadingGetRoomsProtions,errorGetRoomsProtions}= useSelector((state) => state.RoomsPromotios)
   
@@ -152,12 +151,12 @@ const Accommodation = () => {
         return <>{visible &&
           
           isTodaypromotions && (
-          <div className="fixed right-4  left-0 w-full m-auto h-[230px] top-44 z-40 text-white flex rounded-lg overflow-hidden shadow-lg max-w-md">
+          <div className="fixed right-4  left-0 w-full m-auto h-[190px] top-44 z-40 text-white flex rounded-lg overflow-hidden shadow-lg max-w-md">
 
               <div className="p-4  flex-1 bg-gray-700">
                 <h2 className="text-[15px] font-bold mb-2">¡OFERTA EXCLUSIVA SOLO PARA TI!</h2>
                 <p className="text-sm mb-3">
-                  ¡Reserve una de nuestras Cómodas habitaciones y obtenga un 10% DE DESCUENTO EXTRA en su reserva!
+                  Reserva una de nuestras  comidas habitaciónes y unten un 10% de descuento
                 </p>
                 <button  onClick={handSubmitCupon}  className="bg-white w-[200px] md:w-[200px]  text-gray-800 px-4 py-1 rounded text-sm font-semibold hover:bg-gray-200 transition-colors">
                   APLICAR DESCUENTO
@@ -167,12 +166,11 @@ const Accommodation = () => {
                 <img 
                   src="https://grupo-hoteles.com/storage/app/6/rooms/206865655-14-rooms-slider-3-hotel-cartagena-dc-economico-habitacion-clasica-seleccion.webp" 
                   alt="Luxury Suite" 
-                  className="object-cover h-[230px] w-full"
+                  className="object-cover h-[190px] w-full"
                 />
                 <button onClick={() => setVisible(false)} className="absolute  w-6 h-6  top-1 right-1 text-white bg-gray-800 rounded-full flex items-center justify-center">
                   ×
                 </button>
-
             </div>
           </div>
       )}</>
