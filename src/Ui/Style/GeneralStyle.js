@@ -134,7 +134,7 @@ background: white;
 export const ImginProduct = styled.img`
 width: 30%;
 object-fit: cover;
-height:16rem;
+height:17rem;
 
 
 ${fadeInImg({time:"2s"})}

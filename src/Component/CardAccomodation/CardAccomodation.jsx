@@ -43,7 +43,7 @@ const CardAccomodation =({ID,room_image,title,description,Price,cantidad,nights,
                             <TitleDinner />
                             <ImginProduct   className="w-auto" src={room_image}  alt="Hotel Image"/>
                         </Fragment>
-                        <DescripctionAccomodation cantidad={cantidad}  description={description} title={title}  />
+                        <DescripctionAccomodation promotion={promotion} cantidad={cantidad}  description={description} title={title}  />
                         <ButtonAccomodation 
                                 validPromotions={validPromotions}
                                 promotion={promotion}
