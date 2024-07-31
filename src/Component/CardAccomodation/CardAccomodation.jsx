@@ -7,7 +7,7 @@ import useCartActions from "../../Actions/useCartActions";
 import { useSelector } from "react-redux";
 import {toast} from "sonner"
 
-const CardAccomodation =({ID,room_image,title,description,Price,cantidad,nights,person,Room,end,start,Price_nigth,promotion}) =>{
+const CardAccomodation =({ID,room_image,title,description,Price,cantidad,nights,person,Room,end,start,Price_nigth,promotion,totalCountAdults,max_people}) =>{
 
     const {AddCart } =useCartActions()
     
@@ -38,14 +38,16 @@ const CardAccomodation =({ID,room_image,title,description,Price,cantidad,nights,
 
     return (   
             <MainAccomodationRoom className=" lg:flex    mx-auto   max-w-5xl items-center justify-between p-4 lg:px-8"   >     
-            <MainProduct className="lg:flex block bg-white shadow-md"    >
+                    <MainProduct className="lg:flex block bg-white shadow-md"    >
                         <Fragment>
                             <TitleDinner />
                             <ImginProduct   className="w-auto" src={room_image}  alt="Hotel Image"/>
                         </Fragment>
-                        <DescripctionAccomodation promotion={promotion} cantidad={cantidad}  description={description} title={title}  />
+                        <DescripctionAccomodation max_people={max_people} promotion={promotion} cantidad={cantidad}  description={description} title={title}  />
                         <ButtonAccomodation 
+                                max_people={max_people}
                                 validPromotions={validPromotions}
+                                totalCountAdults={totalCountAdults}
                                 promotion={promotion}
                                 handleAddToCart={handleAddToCart}
                                 price={Price} 

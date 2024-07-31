@@ -14,6 +14,7 @@ import HeaderCheckout from '../../Component/HeaderCheckout/HeaderCheckout';
 import FormCheckout from '../../Component/FormCheckout/FormCheckout';
 import Footer from '../../Component/Footer/Footer';
 import ConfirmationMessage from '../../Component/ConfirmationMessage/ConfirmationMessage';
+import WhatsappButton from '../../Component/WhatsappButton/WhatsappButton';
 
 const Checkout  =() =>{
     useFetchData();
@@ -95,6 +96,7 @@ const Checkout  =() =>{
         <Header />
         {loadingCart && <LoadingOverlay title={"Cargando..."} />}
         {loading && <LoadingOverlay title={"Creando reserva..."} />}  
+        <WhatsappButton />
         <HeaderCheckout />
         <Toaster position="bottom-right"  richColors   />  
             {FillContent()}
