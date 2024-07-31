@@ -1,7 +1,7 @@
 const WhatsappButton = () => {
     return (
       <a 
-        className="live-whata fixed right-5 top-[880px] w-[50px] h-[80] z-40"
+        className="live-whata fixed right-4 bottom-4 flex items-center justify-center w-10 h-10 bg-blue-500 rounded-full cursor-pointer transition-transform transform hover:scale-110 z-50  "
         href="https://api.whatsapp.com/send?phone=573152234483" 
         target="_blank"// reemplaza 'yourphonenumber' con tu número de whatsapp
       >
