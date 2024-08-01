@@ -140,9 +140,7 @@ const Accommodation = () => {
     };
 
     const isTodaypromotions =isTodaySelected()
-
-
-
+    
     const FillContentPromotions =()=>{
 
       if(loadingGetRoomsProtions){
@@ -202,8 +200,6 @@ const Accommodation = () => {
                                                               key={index} {...List}/>)}</>
     }
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1;
-
-    console.log(hotel)
 
    
     return (<div >
