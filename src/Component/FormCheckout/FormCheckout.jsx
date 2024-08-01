@@ -67,7 +67,6 @@ const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formVa
                                 </div>
                             </div>
                         </div>
-                            
                         </div>
                     </div>
                     </div>
