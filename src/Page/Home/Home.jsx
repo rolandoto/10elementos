@@ -25,7 +25,6 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 
-
 const Home =() =>{
   const navigate = useNavigate();
   moment.locale('es');
