@@ -45,8 +45,8 @@ const CardAccomodation =({ID,room_image,title,description,Price,cantidad,nights,
                         </Fragment>
                         <DescripctionAccomodation max_people={max_people} promotion={promotion} cantidad={cantidad}  description={description} title={title}  />
                         <ButtonAccomodation 
-                                max_people={max_people}
                                 validPromotions={validPromotions}
+                                max_people={max_people}
                                 totalCountAdults={totalCountAdults}
                                 promotion={promotion}
                                 handleAddToCart={handleAddToCart}

@@ -24,7 +24,5 @@ const  EmpyCart =({title}) =>{
           </p>
         </div>
   </div> )
-
 }
-
 export default EmpyCart

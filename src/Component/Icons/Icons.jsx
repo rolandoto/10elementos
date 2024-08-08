@@ -1,4 +1,3 @@
-
 import { PiSnowflakeThin } from "react-icons/pi";
 import { CiWifiOn } from "react-icons/ci";
 import { PiAirplayLight } from "react-icons/pi";
@@ -252,9 +251,6 @@ export const IconFaCheckCircle  =({color}) =>{
     return <FaCheckCircle  color={color} className="mr-2" fontSize={70}  />
 }
 
-
 export const IconFaUser  =({color}) =>{
     return <FaUser   color={color} fontSize={25}  />
 }
-
-

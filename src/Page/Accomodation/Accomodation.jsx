@@ -67,8 +67,6 @@ const Accommodation = () => {
     const formattedStartDateToString = moment(state[0]?.startDate).format('DD MMM YYYY').toLowerCase();
     const formattedEndDateToString = moment(state[0]?.endDate).format('DD MMM YYYY').toLowerCase();
 
-    console.log(formattedStartDateToString)
-
     const PostHotelByIdHotel = useCallback(async () => {
         setContextMenuPosition(false);
         setContextShowMenuPeople(false)
@@ -109,8 +107,6 @@ const Accommodation = () => {
       }
       setContextShowMenuPeople(false)
     }
-
-
 
     const {RoomsGetPromotions,loadingGetRoomsProtions,errorGetRoomsProtions}= useSelector((state) => state.RoomsPromotios)
   

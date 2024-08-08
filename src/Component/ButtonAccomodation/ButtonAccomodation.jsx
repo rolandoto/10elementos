@@ -2,7 +2,7 @@ import { ContaineButton } from "../../Ui/Style/GeneralStyle"
 import { IconFaUser } from "../Icons/Icons";
 
 const ButtonAccomodation =({price,nights,person,handleAddToCart,promotion,validPromotions,totalCountAdults,max_people})=>{
-        console.log(max_people)
+      
         return (
             <ContaineButton >
                 <div className="p-2 " >

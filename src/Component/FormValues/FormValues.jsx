@@ -3,57 +3,10 @@ import {Button} from "@nextui-org/react";
 import pdf from "../../Image/contracto.pdf"
 const FormValues =({handleSubmit,formErrors,handleChange,formValues,loading,Country})  =>{
 
-    return (<form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Nombre</label>
-                            <input
-                                name="name"
-                                type="text"
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                placeholder="Nombre"
-                                value={formValues.name}
-                                onChange={handleChange}
-                            />
-                            {formErrors.name && <p className="text-red-500 text-xs">{formErrors.name}</p>}
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Apellido</label>
-                            <input
-                                name="apellido"
-                                type="text"
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                placeholder="Apellido"
-                                value={formValues.apellido}
-                                onChange={handleChange}
-                            />
-                            {formErrors.apellido && <p className="text-red-500 text-xs">{formErrors.apellido}</p>}
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Email</label>
-                            <input
-                                name="email"
-                            
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                placeholder="Email"
-                                value={formValues.email}
-                                onChange={handleChange}
-                            />
-                            {formErrors.email && <p className="text-red-500 text-xs">{formErrors.email}</p>}
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Número de teléfono</label>
-                            <input
-                                name="phone"
-                                type="text"
-                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                placeholder="Número de teléfono"
-                                value={formValues.phone}
-                                onChange={handleChange}
-                            />
-                            {formErrors.phone && <p className="text-red-500 text-xs">{formErrors.phone}</p>}
-                        </div>
-                        <div>
+
+    /**
+     * 
+     * <div>
                             <label className="block text-sm font-medium text-gray-700">Dirección</label>
                             <input
                                 name="address"
@@ -105,6 +58,60 @@ const FormValues =({handleSubmit,formErrors,handleChange,formValues,loading,Coun
                                 onChange={handleChange}
                             />
                         </div>
+     * 
+     */
+
+    return (<form onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Nombre</label>
+                            <input
+                                name="name"
+                                type="text"
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                                placeholder="Nombre"
+                                value={formValues.name}
+                                onChange={handleChange}
+                            />
+                            {formErrors.name && <p className="text-red-500 text-xs">{formErrors.name}</p>}
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Apellido</label>
+                            <input
+                                name="apellido"
+                                type="text"
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                                placeholder="Apellido"
+                                value={formValues.apellido}
+                                onChange={handleChange}
+                            />
+                            {formErrors.apellido && <p className="text-red-500 text-xs">{formErrors.apellido}</p>}
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Email</label>
+                            <input
+                                name="email"
+                            
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                                placeholder="Email"
+                                value={formValues.email}
+                                onChange={handleChange}
+                            />
+                            {formErrors.email && <p className="text-red-500 text-xs">{formErrors.email}</p>}
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Número de teléfono</label>
+                            <input
+                                name="phone"
+                                type="text"
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+                                placeholder="Número de teléfono"
+                                value={formValues.phone}
+                                onChange={handleChange}
+                            />
+                            {formErrors.phone && <p className="text-red-500 text-xs">{formErrors.phone}</p>}
+                        </div>
+                        
                     </div>
                 <div>
                     </div>

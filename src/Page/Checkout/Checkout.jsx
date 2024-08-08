@@ -35,8 +35,7 @@ const Checkout  =() =>{
     const now = moment().format('YYYY-MM-DD');
     const validate = useValidation();
 
-    
-    
+
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -49,6 +48,7 @@ const Checkout  =() =>{
                                   email:formValues.email,
                                   city:formValues.city,
                                   country:formValues.country,
+                                  phone:formValues.phone,
                                   fecha:now,
                                   number:cardNumberString,
                                   exp_month:formValues.expiryMonth,
@@ -62,6 +62,8 @@ const Checkout  =() =>{
         } 
     };
 
+
+    console.log(formValues)
 
 
     /*const togglePanel = () => {
