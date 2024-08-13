@@ -1,7 +1,7 @@
 import { TextWidth } from "../../Ui/Style/GeneralStyle"
 import IconAccomodation from "../IconAccomodation/IconAccomodation"
 
-const DescripctionAccomodation =({title,cantidad,description,promotion}) =>{
+const DescripctionAccomodation =({title,promotion}) =>{
 
    /* const Cuantity =  cantidad == 1 ?   <span className="bg-red-500  rounded-sm text-[11px]   p-1 text-white">¡ultima habitacion!</span> :
     <span className="bg-orange-500  text-[11px] rounded-sm font-normal	 p-1  text-white">quedan {cantidad}  Habitaciones </span>

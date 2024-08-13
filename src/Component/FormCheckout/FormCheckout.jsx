@@ -23,7 +23,7 @@ const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formVa
     }
     
     const hotel = hotelList.find(FindIdHotel) 
-  
+
     const FillContent =()=>{
         if(loadingHotel){
                 return <p>cargando</p>

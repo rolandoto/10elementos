@@ -24,6 +24,7 @@ import HeaderAccomodation from "../../Component/HeaderAccomodation/HeaderAccomod
 import Footer from "../../Component/Footer/Footer";
 import useRoomsPromotions from "../../Actions/useRoomsPromotions";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import { Environment } from "../../Config/Config";
 
 const Accommodation = () => {
 
@@ -50,7 +51,8 @@ const Accommodation = () => {
 
     const [promotion,setPromotions] =useState(false)
     const [visible, setVisible] = useState(false);
-      
+    
+
     
     const handSubmitCupon =() =>{
       setPromotions(true)
@@ -70,7 +72,7 @@ const Accommodation = () => {
     const PostHotelByIdHotel = useCallback(async () => {
         setContextMenuPosition(false);
         setContextShowMenuPeople(false)
-        await getHotel({ id: 4, desde:formattedStartDate, hasta: formattedEndDate,counPeople:totalCountAdults });
+        await getHotel({propertyID:Environment.propertyID,startDate:formattedStartDate, endDate: formattedEndDate,token:Environment.Token,counPeople:totalCountAdults });
     }, [formattedStartDate,formattedEndDate,totalCountAdults]);
 
     useEffect(() =>{
@@ -121,6 +123,7 @@ const Accommodation = () => {
       FetchDate ()
     },[])
    
+
     useEffect(() => {
       const timer = setTimeout(() => {
         setVisible(true);
@@ -176,7 +179,9 @@ const Accommodation = () => {
       )}</>
     }
   
-  
+
+    console.log(hotel)
+
     const FillContent =()=>{
       if(!formattedStartDate && !formattedEndDate){
         return   <EmpyCart title={" Busca tu reserva en el calendario."} />
@@ -188,9 +193,13 @@ const Accommodation = () => {
                 </div> 
        ) 
       }if(error){
-        return    <EmpyCart title={"No tenemos habitaciones disponibles para esta ocupación"} />
+        return    <EmpyCart title={"Lo sentimos, en este momento no contamos con alojamientos disponibles para las fechas seleccionadas. Por favor, modifique las fechas para generar una nueva búsqueda. O puede contactar a nuestro equipo para obtener más información llamando al +57 3152234483."} />
                 }
-        return <>  {hotel?.availableRooms?.map((List,index) => <CardAccomodation  
+        return <>  {hotel?.data?.map((List,index) => <CardAccomodation  
+                                                              counPeople={hotel.counPeople}
+                                                              endDate={hotel.endDate}
+                                                              startDate={hotel.startDate}
+                                                              nightsToday={hotel.nights}
                                                               promotion={promotion} 
                                                               totalCountAdults={totalCountAdults}
                                                               key={index} {...List}/>)}</>
