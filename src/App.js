@@ -12,7 +12,6 @@ import EventsNext from './Page/Events/EventsNext';
 import Login from './Page/Login/Login';
 import Somethingwrong from './Page/somethingwrong/Somethingwrong';
 
-
 function App() {
   return (
     <Provider  store={store}>

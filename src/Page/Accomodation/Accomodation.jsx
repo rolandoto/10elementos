@@ -180,7 +180,6 @@ const Accommodation = () => {
     }
   
 
-    console.log(hotel)
 
     const FillContent =()=>{
       if(!formattedStartDate && !formattedEndDate){
