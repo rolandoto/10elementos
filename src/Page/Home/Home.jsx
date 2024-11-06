@@ -235,18 +235,19 @@ const subtotal = getCartSubtotal()
     const hotelReferid = [
       {
         description: "Viaje de Negocios",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
-        url: 'https://appartments.com.co/',
+        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
+        url: 'https://47medellinstreethotel.com/',
+      
       },
       {
-        description: "Una viaje romántico en pareja",
+        description: "Viaje romántico en pareja",
         image: 'https://github.com/rolandoto/image-pms/blob/main/MG_8648-scaled.jpg?raw=true', // Replace with actual image URL
         url: 'https://galleryhotel.co/',
       },
       {
-        description: "Viaje para asistir a un evento",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
-        url: 'https://47medellinstreethotel.com/',
+        description: "Viaje Turismo de Salud",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
+        url: 'https://appartments.com.co/',
       }
     ];
 
@@ -498,7 +499,7 @@ const subtotal = getCartSubtotal()
             target="_blank"
             href={caption.url}
             key={index}
-            className="relative w-48 h-32 md:w-64 md:h-40 cursor-pointer rounded overflow-hidden shadow-lg"
+            className="relative w-48 h-32 md:w-64 md:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
           >
             <img
               src={caption.image}
