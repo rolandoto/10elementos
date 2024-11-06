@@ -251,6 +251,8 @@ const subtotal = getCartSubtotal()
       }
     ];
 
+    
+
     return (
         <div>
           {FillContent}
