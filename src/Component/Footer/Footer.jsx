@@ -45,40 +45,35 @@ const Footer =() =>{
                
                
                 <div className=" ">
+                    <div class=" text-white md:block flex  md:justify-center  w-full items-end justify-center ">
+                    <div class="w-full max-w-7xl mt-6">
+                        <h2 class="text-center text-xl font-semibold mb-6"></h2>
                     
-                    <div class=" text-white md:flex flex  md:justify-center flex-col  w-full items-end justify-center ">
-                        <div class="w-full max-w-7xl mt-6">
-                            <h2 class="text-center text-xl font-semibold mb-6"></h2>
-                            <a target="_blank" href={pdf} className="text-white "> Términos y Condiciones del sitio web</a>.
-                        </div>
-
+                    </div>
                         <div className=" bottom-0  right-5 w-40 h-[100px] md:w-60 md:h-60">
-      <div className="map-container" style={{ width: "100%", height: "100%" }}>
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.6054137513!2d-75.5631796!3d6.2437756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428575a0dc0d1%3A0xbc26f43cbd055cc8!2sGallery%20Hotel%20Medell%C3%ADn!5e0!3m2!1sen!2sve!4v1730845631930!5m2!1sen!2sve"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </div>
+                    <div className="map-container" style={{ width: "100%", height: "100%" }}>
+                        <iframe
+                        title="Google Map"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.6054137513!2d-75.5631796!3d6.2437756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428575a0dc0d1%3A0xbc26f43cbd055cc8!2sGallery%20Hotel%20Medell%C3%ADn!5e0!3m2!1sen!2sve!4v1730845631930!5m2!1sen!2sve"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    </div>
                     </div>
                 </div>
               
-
-          
-  
-                
                 </div>
                 <div className="text-center border-t-1  mx-auto max-w-7xl  text-white mt-8">
                     <div className=" flex  flex-col sm:flex-row  justify-between mt-8 mx-auto max-w-7xl items-center">
                             <div>
-                                Copyright © 2024 – All Rights Reserved Gallery Hotel
+                            © Copyright. Todos los derechos reservados
                             </div>
+                            <a target="_blank" href={pdf} className="text-white "> Términos y Condiciones del sitio web</a>.
                                     <div className=" ">
                                     <div className="flex space-x-4">
                                     <img 
