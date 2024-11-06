@@ -225,12 +225,30 @@ const subtotal = getCartSubtotal()
     const rooms = [
       {  title: 'Room Box Ventilador', price:99000 , image:"https://grupo-hoteles.com/storage/app/4/rooms/203289556-10-rooms-slider-1-habitacion_Estandar_Hotel_en_Medellin_Gallery_Hotel-01.webp", 
           features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV'] },
-      { title: 'Room Box Aire',price:109000, image: "https://grupo-hoteles.com/storage/app/4/rooms/1046121300-11-rooms-slider-1-habitacion_Aire_Hotel_en_Medellin_Gallery_Hotel-01.webp", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado'] },
+      { title: 'Room Box Aire',price:110000, image: "https://grupo-hoteles.com/storage/app/4/rooms/1046121300-11-rooms-slider-1-habitacion_Aire_Hotel_en_Medellin_Gallery_Hotel-01.webp", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado'] },
       { title: 'Room Box Jacuzzi',price:169000, image: "https://grupo-hoteles.com/storage/app/4/rooms/1563326590-12-rooms-slider-1-habitacion_Jacuzzi_Hotel_en_Medellin_Gallery_Hotel-02.webp", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado','Jacuzzi'] },
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
 
+
+    const hotelReferid = [
+      {
+        description: "Viaje de Negocios",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
+        url: 'https://appartments.com.co/',
+      },
+      {
+        description: "Una viaje romántico en pareja",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/MG_8648-scaled.jpg?raw=true', // Replace with actual image URL
+        url: 'https://galleryhotel.co/',
+      },
+      {
+        description: "Viaje para asistir a un evento",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
+        url: 'https://47medellinstreethotel.com/',
+      }
+    ];
 
     return (
         <div>
@@ -453,6 +471,48 @@ const subtotal = getCartSubtotal()
                           /> } 
 
           <AccordionAsk faqs={faqs} />
+
+          <div
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      
+      {/* Main Message */}
+      <div className="absolute  md:top-1/4  top-0 text-white left-8 md:left-16 max-w-lg">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          ¡Queremos que tu estancia sea inolvidable!
+        </h1>
+        <p className="mt-4 text-base md:text-lg">
+          Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
+        </p>
+        <p className="mt-2 text-base md:text-lg">
+          ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
+        </p>
+      </div>
+
+      {/* Image Cards */}
+      <div className="absolute md:top-1/4 top-[350px] left-0 right-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-end space-y-4 md:space-y-0 md:space-x-4">
+        {hotelReferid.map((caption, index) => (
+          <a
+            target="_blank"
+            href={caption.url}
+            key={index}
+            className="relative w-48 h-32 md:w-64 md:h-40 cursor-pointer rounded overflow-hidden shadow-lg"
+          >
+            <img
+              src={caption.image}
+              alt={caption.description}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
+              {caption.description}
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
           <Footer />
     
           </div>

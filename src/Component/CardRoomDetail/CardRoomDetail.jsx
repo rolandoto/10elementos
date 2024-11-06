@@ -27,7 +27,7 @@ const CardRoomDetail =({features,image,title,price}) =>{
                 </ul>        
                 <div className="PriceRoomDetail">
                     <div >
-                        <strong className=" text-[20px] " >Desde ${parseInt(price).toLocaleString('es-CO')} cop</strong>
+                        <strong className=" text-[20px] " >Desde ${parseInt(price).toLocaleString('es-CO')} cop  (IVA incluido) </strong>
                     </div>
                     <button onClick={handSubmitNextReservation} className="text-white bg-orange-500 mt-4   w-[290px] md:w-[150px]  p-3 rounded hover:bg-orange-600"><span className=" text-[20px]" >Reservar</span></button>                  
                 </div>   
