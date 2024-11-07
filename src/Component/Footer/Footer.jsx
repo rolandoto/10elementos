@@ -1,7 +1,7 @@
 import React from "react"
 import {  IconFaFacebookF, IconFaInstagram, IconFaMapMarkerAlt, IconFaWhatsapp, IconFaYoutube, IconsMdEmail } from "../Icons/Icons"
 import pdf from "../../Image/contracto.pdf"
-const Footer =() =>{
+const Footer =({PostHotelByIdHotel}) =>{
 
     const handleFacebook = () => {
         window.open("https://www.facebook.com/galleryhotelmedellin", "_blank");
@@ -14,7 +14,7 @@ const Footer =() =>{
     return (
             <footer className="bg-black   text-white py-8">
                 <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div className="flex">
+                <div className="block">
                     <img
                         src="https://github.com/rolandoto/image-pms/blob/main/Logo-Gallery-Colores.png?raw=true"
                         alt="Logo de Gallery Hotel" 
@@ -22,8 +22,16 @@ const Footer =() =>{
                         height="100"
                         className="w-48 mb-4"
                     />
+                        <button
+                        onClick={PostHotelByIdHotel}
+                        className="m-auto  w-full px-8 py-4 bg-orange-500 text-white  transition-colors"
+                    >
+                        Reservar
+                    </button>
+
                 </div>
 
+            
                 <div>
                     <div className="">
                         <ul className="space-y-2">

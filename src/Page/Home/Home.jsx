@@ -481,7 +481,6 @@ const subtotal = getCartSubtotal()
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
       
-      {/* Main Message */}
       <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
         <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
           ¡Queremos que tu estancia sea inolvidable!
@@ -515,7 +514,7 @@ const subtotal = getCartSubtotal()
       </div>
 
     </div>
-          <Footer />
+          <Footer PostHotelByIdHotel={PostHotelByIdHotel} />
     
           </div>
     )
