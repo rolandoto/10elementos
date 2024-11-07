@@ -24,14 +24,11 @@ const Footer =({PostHotelByIdHotel}) =>{
                     />
                         <button
                         onClick={PostHotelByIdHotel}
-                        className="m-auto  w-full px-8 py-4 bg-orange-500 text-white  transition-colors"
-                    >
+                        className="m-auto  w-full px-8 py-4 bg-orange-500 text-white  transition-colors">
                         Reservar
                     </button>
-
                 </div>
 
-            
                 <div>
                     <div className="">
                         <ul className="space-y-2">
