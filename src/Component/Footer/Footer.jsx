@@ -1,6 +1,9 @@
 import React from "react"
 import {  IconFaFacebookF, IconFaInstagram, IconFaMapMarkerAlt, IconFaWhatsapp, IconFaYoutube, IconsMdEmail } from "../Icons/Icons"
 import pdf from "../../Image/contracto.pdf"
+import garantia from "../../Image/garantia.pdf"
+
+
 const Footer =({PostHotelByIdHotel}) =>{
 
     const handleFacebook = () => {
@@ -78,7 +81,11 @@ const Footer =({PostHotelByIdHotel}) =>{
                             <div>
                             © Copyright. Todos los derechos reservados
                             </div>
-                            <a target="_blank" href={pdf} className="text-white "> Términos y Condiciones del sitio web</a>.
+                            <a target="_blank" href={pdf} className="text-white "> Términos y Condiciones del sitio web</a>
+                         
+                   
+                        <a target="_blank" href={garantia} className="text-white">Política de garantía</a>
+                        <a target="_blank"  className="text-white">Política de tratamiento de datos</a>
                                     <div className=" ">
                                     <div className="flex space-x-4">
                                     <img 
