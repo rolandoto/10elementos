@@ -24,6 +24,7 @@ import Cart from "../../Component/Cart/Cart";
 import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import Usetitle from "../../Hooks/Usetitle";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -33,6 +34,8 @@ const Home =() =>{
     // Scrolls to the top of the document on component mount
     window.scrollTo(0, 0);
 }, []);
+
+  Usetitle({title:"Habitaciones Gallery Hotel - En el corazón de Medellín  Web Oficial."})
 
   const {getCartSubtotal} = UseCart()
   const {hotelList,loadingHotel,errorHotel}= useSelector((state) => state.Hotel)
@@ -249,7 +252,7 @@ const subtotal = getCartSubtotal()
         image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
         url: 'https://appartments.com.co/',
       }
-    ];
+    ]
 
     
 
@@ -260,13 +263,17 @@ const subtotal = getCartSubtotal()
            <div className="relative bg-cover bg-center h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp)`,}}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <div className="relative z-10 flex flex-col items-center justify-center h-[500px] text-center text-white">
                 <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
-                  {loadingHotel ?"cargando " :hotel?.nombre}  
+                  {loadingHotel ?"cargando " :hotel?.nombre} Medellín
                 </h1>
-                <p className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
-                    Más que un hotel, una experiencia artística
-                </p>
+                <h2 className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
+                      ¡Donde el arte y la hospitalidad se unen!
+                    </h2>
+
+                    <h2 className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
+                    Tu hogar en el centro de Medellín
+                    </h2>
                 <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-[#ff7a45]" onClick={scrollToRoomSection}>
                     Ver habitaciones
                 </button>
@@ -304,7 +311,7 @@ const subtotal = getCartSubtotal()
                   moveRangeOnFirstSelection={false} // No mueve el rango en la primera selección
                   showSelectionPreview={false} // Muestra la selección previa
                   startDatePlaceholder="Early"
-                  showDateDisplay={true}
+                  showDateDisplay={false}
                   ranges={state}
                   direction="horizontal"
                   locale={esLocale}
@@ -396,7 +403,7 @@ const subtotal = getCartSubtotal()
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
           </div>
           <div className="max-w-7xl mx-auto py-8">
-              <h2 className="text-[30px] text-center text-orange-500  font-lora  mb-6">Lo que opinan nuestros clientes</h2>
+              <h4 className="text-[30px] text-center text-orange-500  font-lora  mb-6">Lo que opinan nuestros clientes</h4>
               <div className="block md:flex" >
                     <div className="flex items-center justify-center ">
                       <div className="max-w-sm p-6">
@@ -466,9 +473,7 @@ const subtotal = getCartSubtotal()
             </div>
           </div>
 
-          <div ref={roomEventsSectionRef} >
-            <Events  />
-          </div>
+          
 
           {subtotal >0 &&<Cart    
                           /> } 
@@ -476,44 +481,44 @@ const subtotal = getCartSubtotal()
           <AccordionAsk faqs={faqs} />
 
           <div
-      className="relative h-[850px] bg-cover bg-center"
-      style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}
-    >
+              className="relative h-[850px] bg-cover bg-center"
+              style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}
+            >
       <div className="absolute inset-0 bg-black opacity-60"></div>
       
-      <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
-        <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-          ¡Queremos que tu estancia sea inolvidable!
-        </h1>
-        <p className="mt-4 text-base lg:text-lg">
-          Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
-        </p>
-        <p className="mt-2 text-base lg:text-lg">
-          ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
-        </p>
-      </div>
+        <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
+          <h3 className="text-4xl lg:text-6xl font-bold leading-tight">
+            ¡Queremos que tu estancia sea inolvidable!
+          </h3>
+          <h2 className="mt-4 text-base lg:text-lg">
+            Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
+          </h2>
+          <h2 className="mt-2 text-base lg:text-lg">
+            ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
+          </h2>
+        </div>
 
-      <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
-        {hotelReferid.map((caption, index) => (
-          <a
-            target="_blank"
-            href={caption.url}
-            key={index}
-            className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
-          >
-            <img
-              src={caption.image}
-              alt={caption.description}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
-              {caption.description}
-            </div>
-          </a>
-        ))}
-      </div>
+        <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
+          {hotelReferid.map((caption, index) => (
+            <a
+              target="_blank"
+              href={caption.url}
+              key={index}
+              className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
+            >
+              <img
+                src={caption.image}
+                alt={caption.description}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
+                {caption.description}
+              </div>
+            </a>
+          ))}
+        </div>
 
-    </div>
+      </div>
           <Footer PostHotelByIdHotel={PostHotelByIdHotel} />
     
           </div>

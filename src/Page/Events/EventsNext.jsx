@@ -3,8 +3,12 @@ import Events from "../../Component/Events/Events";
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import Usetitle from "../../Hooks/Usetitle";
 
 const EventsNext =()  =>{
+
+    Usetitle({title:"Próximos eventos en Medellín"})
+
     useEffect(() => {
         // Scrolls to the top of the document on component mount
         window.scrollTo(0, 0);

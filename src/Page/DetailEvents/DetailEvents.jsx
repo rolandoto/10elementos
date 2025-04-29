@@ -5,6 +5,7 @@ import Footer from "../../Component/Footer/Footer";
 import { useSelector } from "react-redux";
 import UseEventsActions from "../../Actions/useEventsActions";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import Usetitle from "../../Hooks/Usetitle";
 
 const DetailEvents =() =>{
 
@@ -18,7 +19,8 @@ const DetailEvents =() =>{
     const {geteventsDetail,loadinggetEventsDetail,errorgetEventsDetail}= useSelector(state => state.Events);
     const {getEventsDetail} =UseEventsActions()    
   
-    console.log(geteventsDetail)
+    Usetitle({title:"Próximos eventos en Medellín"})
+
 
       const fetchDate =async() =>{
           await getEventsDetail({id:userId})

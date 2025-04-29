@@ -30,6 +30,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import { PiBedThin } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
+import { ImUsers } from "react-icons/im";
+import { MdOutlineKingBed } from "react-icons/md";
 
 export const IconsSnow =() =>{
     const key = `my-tooltip`;
@@ -206,39 +208,39 @@ export const IconsTiHome =() =>{
 }
 
 export const IconsFaGlassMartini =() =>{
-    return <FaMartiniGlassCitrus   color="#ff7a45" className="" fontSize={30}  />
+    return <FaMartiniGlassCitrus   color="black" className="" fontSize={30}  />
 }
 
 export const IconsGiForkKnifeSpoon =() =>{
-    return <GiForkKnifeSpoon   color="#ff7a45" className="" fontSize={30}  />
+    return <GiForkKnifeSpoon   color="black" className="" fontSize={30}  />
 }
 
 
 export const IconsaCar =() =>{
-    return <FaCar   color="#ff7a45" className="" fontSize={30}  />
+    return <FaCar   color="black" className="" fontSize={30}  />
 }
 
 
 
 export const IconsFaSquareParking =() =>{
-    return <FaSquareParking   color="#ff7a45" className="" fontSize={30}  />
+    return <FaSquareParking   color="black" className="" fontSize={30}  />
 }
 
 export const IconsFaStore =() =>{
-    return <FaStore   color="#ff7a45" className="" fontSize={30}  />
+    return <FaStore   color="black" className="" fontSize={30}  />
 }
 
 export const IconsFaBanSmoking =() =>{
-    return <FaBanSmoking   color="#ff7a45" className="" fontSize={30}  />
+    return <FaBanSmoking   color="black" className="" fontSize={30}  />
 }
 
 export const IconsFaConciergeBell =() =>{
-    return <FaConciergeBell   color="#ff7a45" className="" fontSize={30}  />
+    return <FaConciergeBell   color="black" className="" fontSize={30}  />
 }
 
 
 export const IconsRiBankFill =() =>{
-    return <RiBankFill   color="#ff7a45" className="" fontSize={30}  />
+    return <RiBankFill   color="black" className="" fontSize={30}  />
 }
 
 
@@ -252,5 +254,11 @@ export const IconFaCheckCircle  =({color}) =>{
 }
 
 export const IconFaUser  =({color}) =>{
-    return <FaUser   color={color} fontSize={25}  />
+    return <ImUsers   color={color} fontSize={20}  />
 }
+
+
+export const IconMdOutlineKingBed   =({color}) =>{
+    return <MdOutlineKingBed    color={color} fontSize={25}  />
+}
+    
