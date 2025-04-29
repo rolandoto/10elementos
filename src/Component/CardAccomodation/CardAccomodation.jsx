@@ -224,7 +224,7 @@ const CardAccomodation =({  roomTypeName,
                     </div>
                     <div className="p-4">
                        {validPromotion && 
-                       <div className="bg-[#91763e] rounded-xl text-white px-2 py-1 text-xs inline-block mb-2">
+                       <div className="bg-[#f97316] rounded-xl text-white px-2 py-1 text-xs inline-block mb-2">
                        Beneficios para miembros aplicados -{10}%
                      </div> } 
                       <div className="flex justify-between items-start mb-1">
