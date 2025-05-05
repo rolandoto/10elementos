@@ -10,7 +10,6 @@ import TitleWelcome from "../../Component/TitleWelcome/TitleWelcome";
 import Features from "../../Component/Features/Features";
 import Footer from "../../Component/Footer/Footer";
 import AccordionAsk from "../../Component/AccordionAsk/AccordionAsk";
-import Events from "../../Component/Events/Events";
 import RoomDetail from "../../Component/RoomDetail/RoomDetail";
 import RoomPresentaion from "../../Component/RoomPresentation/RoomPresentation";
 import "./home.css"

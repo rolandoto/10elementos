@@ -25,7 +25,7 @@ const Checkout  =() =>{
         window.scrollTo(0, 0);
     }, []);
 
-    Usetitle({title:""})
+
 
     const [formErrors, setFormErrors] = useState({});
     const [formValues, handleChange] = useFormValues();
