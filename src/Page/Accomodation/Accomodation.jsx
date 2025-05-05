@@ -26,12 +26,15 @@ import { FiArrowRight } from "react-icons/fi";
 import {  Tag, Coffee, Clock} from 'lucide-react';
 import HeaderStep from "../../Component/Header/HeaderStep";
 import Footer from "../../Component/Footer/Footer";
+import Usetitle from "../../Hooks/Usetitle";
 
 const Accommodation = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
 }, []);
+
+  Usetitle({title:"Habitaciones Gallery Hotel - En el corazón de Medellín  Web Oficial."})
 
   const {getHotel} = UseHotelActions()
   const [contextShowMenuPeople, setContextShowMenuPeople] = useState(false);

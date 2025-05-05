@@ -35,8 +35,7 @@ const Home =() =>{
     window.scrollTo(0, 0);
 }, []);
 
-  Usetitle({title:"Habitaciones Gallery Hotel - En el corazón de Medellín  Web Oficial."})
-
+  Usetitle({title:"Gallery Hotel - En el corazón de Medellín"})
   const {getCartSubtotal} = UseCart()
   const {hotelList,loadingHotel,errorHotel}= useSelector((state) => state.Hotel)
   const {getListHotel} =UseHotelActions()
@@ -72,7 +71,7 @@ const subtotal = getCartSubtotal()
       date: "hace un mes",
       rating: 4,
       text: "Un ambiente tranquilo, buena ubicación!",
-      avatar: "https://github.com/rolandoto/image-pms/blob/main/Robinson(3).png?raw=true", // Add the path to the avatar image if available
+      avatar: "https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Robinson(3).png", // Add the path to the avatar image if available
     },
     {
       id: 2,
@@ -80,7 +79,7 @@ const subtotal = getCartSubtotal()
       date: "hace un mes",
       rating: 5,
       text: "",
-      avatar: "https://github.com/rolandoto/image-pms/blob/main/Cielo.png?raw=true", // Add the path to the avatar image if available
+      avatar: "https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Cielo.png", // Add the path to the avatar image if available
     },
     {
       id: 3,
@@ -88,7 +87,7 @@ const subtotal = getCartSubtotal()
       date: "",
       rating: 5,
       text: "",
-      avatar: "https://github.com/rolandoto/image-pms/blob/main/Esleidy(3).png?raw=true", // Add the path to the avatar image if available
+      avatar: "https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Esleidy(3).png", // Add the path to the avatar image if available
     },
    
     {
@@ -97,7 +96,7 @@ const subtotal = getCartSubtotal()
       date: "hace 5 meses",
       rating: 5,
       text: "Un poquito lejos del centro, sobre la iluminación es perfecta para descansar y la ubicación estratégica para encender las luces por zonas me parece muy bueno para el precio! Más amabilidad es lo único que podría pedir, con esto no digo que son groseros, mejor dicho son intermedio! 👍",
-      avatar: "https://github.com/rolandoto/image-pms/blob/main/importadora(2).png?raw=true",
+      avatar: "https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/importadora(2).png",
     },
     {
       id: 5,
@@ -105,7 +104,7 @@ const subtotal = getCartSubtotal()
       date: "hace un mes",
       rating: 5,
       text: "Es un lugar muy agradable, con un restaurante encantador, buena atención al cliente, las habitaciones aseadas y ordenadas; el único defecto es que las habitaciones no cuentan con agua caliente y no hay TV por cable, pero por lo demás todo está súper bien.      ",
-      avatar: "https://github.com/rolandoto/image-pms/blob/main/angie(2).png?raw=true",
+      avatar: "https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/angie(2).png",
     }
   ];
   
@@ -226,34 +225,33 @@ const subtotal = getCartSubtotal()
     ];
 
     const rooms = [
-      {  title: 'Room Box Ventilador', price:99000 , image:"https://grupo-hoteles.com/storage/app/4/rooms/203289556-10-rooms-slider-1-habitacion_Estandar_Hotel_en_Medellin_Gallery_Hotel-01.webp", 
+      {  title: 'Room Box Ventilador', price:99000 , image:"https://h-img3.cloudbeds.com/uploads/315189/classic_featured~~67e81830bb4a7.jpg", 
           features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV'] },
-      { title: 'Room Box Aire',price:110000, image: "https://grupo-hoteles.com/storage/app/4/rooms/1046121300-11-rooms-slider-1-habitacion_Aire_Hotel_en_Medellin_Gallery_Hotel-01.webp", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado'] },
-      { title: 'Room Box Jacuzzi',price:169000, image: "https://grupo-hoteles.com/storage/app/4/rooms/1563326590-12-rooms-slider-1-habitacion_Jacuzzi_Hotel_en_Medellin_Gallery_Hotel-02.webp", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado','Jacuzzi'] },
+      { title: 'Room Box Aire',price:110000, image: "https://h-img3.cloudbeds.com/uploads/315189/_mg_2527_gallery~~66647c3371b2c.jpg", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado'] },
+      { title: 'Room Box Jacuzzi',price:169000, image: "https://h-img1.cloudbeds.com/uploads/315189/jacuzzi6_gallery~~67e81a8579e2c.jpeg", features: ['Cama matrimonial', 'Baño privado con ducha', 'Wi-Fi gratuito', 'Smart TV','Aire Acondicionado','Jacuzzi'] },
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
 
-
     const hotelReferid = [
       {
         description: "Viaje de Negocios",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Logos/47street.jpg', // Replace with actual image URL
         url: 'https://47medellinstreethotel.com/',
       
       },
       {
         description: "Viaje romántico en pareja",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/MG_8648-scaled.jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/MG_8648-scaled.jpg', // Replace with actual image URL
         url: 'https://galleryhotel.co/',
       },
       {
         description: "Viaje Turismo de Salud",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/_MG_0188%20(1).jpg', // Replace with actual image URL
         url: 'https://appartments.com.co/',
       }
-    ]
-
+    ];
+  
     
 
     return (
@@ -408,11 +406,7 @@ const subtotal = getCartSubtotal()
                     <div className="flex items-center justify-center ">
                       <div className="max-w-sm p-6">
                         <div className="flex items-center">
-                          <img
-                            className="w-12 h-12 rounded-full"
-                            src="https://github.com/rolandoto/image-pms/blob/main/2020-06-27.jpg?raw=true"
-                            alt="Hotel"
-                          />
+                          
                           <div className="ml-4">
                             <h2 className="text-lg font-semibold">Gallery Hotel Medellín</h2>
                             <div className="flex items-center">
@@ -445,83 +439,77 @@ const subtotal = getCartSubtotal()
                         </a>
                       </div>
                             </div>
-              <div className="flex overflow-x-scroll space-x-4">
-                {reviews.map((review) => (
-                  <div key={review.id} className="min-w-[250px] max-w-[250px] p-4 bg-white shadow rounded-lg">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <img src={review.avatar} alt={review.name} className="w-10 h-10 rounded-full" />
-                      <div>
-                        <h3 className="font-semibold">{review.name}</h3>
-                        <p className="text-sm text-gray-500">{review.date}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center mb-2">
-                      {[...Array(5)].map((star, index) => (
-                        
-                        <svg className={`w-5 h-5  ${index < review.rating ?" text-orange-500" :"text-gray-300"} `} fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.374 4.223a1 1 0 00.95.69h4.455c.969 0 1.371 1.24.588 1.81l-3.6 2.61a1 1 0 00-.364 1.118l1.374 4.223c.3.921-.755 1.688-1.54 1.118l-3.6-2.61a1 1 0 00-1.176 0l-3.6 2.61c-.784.57-1.838-.197-1.54-1.118l1.374-4.223a1 1 0 00-.364-1.118l-3.6-2.61c-.783-.57-.381-1.81.588-1.81h4.455a1 1 0 00.95-.69l1.374-4.223z" />
-                      </svg>
-                       
+                    <div className="flex overflow-x-scroll space-x-4">
+                      {reviews.map((review) => (
+                        <div key={review.id} className="min-w-[250px] max-w-[250px] p-4 bg-white shadow rounded-lg">
+                          <div className="flex items-center space-x-2 mb-4">
+                            <img src={review.avatar} alt={review.name} className="w-10 h-10 rounded-full" />
+                            <div>
+                              <h3 className="font-semibold">{review.name}</h3>
+                              <p className="text-sm text-gray-500">{review.date}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center mb-2">
+                            {[...Array(5)].map((star, index) => (
+                              
+                              <svg className={`w-5 h-5  ${index < review.rating ?" text-orange-500" :"text-gray-300"} `} fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.374 4.223a1 1 0 00.95.69h4.455c.969 0 1.371 1.24.588 1.81l-3.6 2.61a1 1 0 00-.364 1.118l1.374 4.223c.3.921-.755 1.688-1.54 1.118l-3.6-2.61a1 1 0 00-1.176 0l-3.6 2.61c-.784.57-1.838-.197-1.54-1.118l1.374-4.223a1 1 0 00-.364-1.118l-3.6-2.61c-.783-.57-.381-1.81.588-1.81h4.455a1 1 0 00.95-.69l1.374-4.223z" />
+                            </svg>
+                            
+                            ))}
+                          </div>
+                          <p className="text-gray-700">{review.text}</p>
+                        </div>
                       ))}
                     </div>
-                    <p className="text-gray-700">{review.text}</p>
+
+
                   </div>
-                ))}
-              </div>
-
-
-            </div>
           </div>
-
-          
-
           {subtotal >0 &&<Cart    
-                          /> } 
-
+                                /> } 
           <AccordionAsk faqs={faqs} />
 
           <div
               className="relative h-[850px] bg-cover bg-center"
-              style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}
-            >
-      <div className="absolute inset-0 bg-black opacity-60"></div>
-      
-        <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
-          <h3 className="text-4xl lg:text-6xl font-bold leading-tight">
-            ¡Queremos que tu estancia sea inolvidable!
-          </h3>
-          <h2 className="mt-4 text-base lg:text-lg">
-            Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
-          </h2>
-          <h2 className="mt-2 text-base lg:text-lg">
-            ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
-          </h2>
-        </div>
-
-        <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
-          {hotelReferid.map((caption, index) => (
-            <a
-              target="_blank"
-              href={caption.url}
-              key={index}
-              className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
-            >
-              <img
-                src={caption.image}
-                alt={caption.description}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
-                {caption.description}
+              style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            
+              <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
+                <h3 className="text-4xl lg:text-6xl font-bold leading-tight">
+                  ¡Queremos que tu estancia sea inolvidable!
+                </h3>
+                <h2 className="mt-4 text-base lg:text-lg">
+                  Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
+                </h2>
+                <h2 className="mt-2 text-base lg:text-lg">
+                  ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
+                </h2>
               </div>
-            </a>
-          ))}
-        </div>
 
-      </div>
-          <Footer PostHotelByIdHotel={PostHotelByIdHotel} />
-    
+              <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
+                {hotelReferid.map((caption, index) => (
+                  <a
+                    target="_blank"
+                    href={caption.url}
+                    key={index}
+                    className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={caption.image}
+                      alt={caption.description}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
+                      {caption.description}
+                    </div>
+                  </a>
+                ))}
+              </div>
+
           </div>
+          <Footer PostHotelByIdHotel={PostHotelByIdHotel} />
+             </div>
     )
     
 }
