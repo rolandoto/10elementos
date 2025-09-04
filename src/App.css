@@ -4,8 +4,7 @@
 
 
 .container {
-  height: 100vh;
-  overflow: scroll; /* Permite el scroll */
+  height: 50vh;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE y Edge */
 }

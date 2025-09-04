@@ -24,6 +24,7 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import Usetitle from "../../Hooks/Usetitle";
+import SubscriptionPopup from "../../Component/SubscriptionPopup/SubscriptionPopup";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -251,12 +252,17 @@ const subtotal = getCartSubtotal()
       }
     ];
   
-    
+    /**
+     * 
+     *   
+     * 
+     */
 
     return (
         <div>
           {FillContent}
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
+             <SubscriptionPopup />
            <div className="relative bg-cover bg-center h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp)`,}}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -396,10 +402,12 @@ const subtotal = getCartSubtotal()
           <TitleWelcome />
           <Features features={features} />
           <RoomPresentaion />
+                  
           <div ref={roomSectionRef} >   
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
           </div>
-          <div className="max-w-7xl mx-auto py-8">
+
+          <div className="max-w-7xl mt-10 mx-auto py-8">
               <h4 className="text-[30px] text-center text-orange-500  font-lora  mb-6">Lo que opinan nuestros clientes</h4>
               <div className="block md:flex" >
                     <div className="flex items-center justify-center ">
@@ -461,17 +469,27 @@ const subtotal = getCartSubtotal()
                         </div>
                       ))}
                     </div>
-
-
                   </div>
           </div>
+          <div className="relative flex justify-center items-center p-4">
+            <div className="map-container w-[90%] md:w-[70%] h-[250px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                title="Google Map"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.6054137513!2d-75.5631796!3d6.2437756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428575a0dc0d1%3A0xbc26f43cbd055cc8!2sGallery%20Hotel%20Medell%C3%ADn!5e0!3m2!1sen!2sve!4v1730845631930!5m2!1sen!2sve"
+                className="w-full h-full border-0"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+
           {subtotal >0 &&<Cart    
                                 /> } 
           <AccordionAsk faqs={faqs} />
-
-          <div
-              className="relative h-[850px] bg-cover bg-center"
-              style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}>
+        
+          <div className="relative h-[850px]    bg-cover bg-center" style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp")' }}>
             <div className="absolute inset-0 bg-black opacity-60"></div>
             
               <div className="absolute  lg:top-1/4  top-0 text-white left-8 lg:left-16 max-w-lg">
@@ -485,15 +503,13 @@ const subtotal = getCartSubtotal()
                   ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
                 </h2>
               </div>
-
               <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
                 {hotelReferid.map((caption, index) => (
                   <a
                     target="_blank"
                     href={caption.url}
                     key={index}
-                    className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
-                  >
+                    className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg">
                     <img
                       src={caption.image}
                       alt={caption.description}
@@ -505,7 +521,6 @@ const subtotal = getCartSubtotal()
                   </a>
                 ))}
               </div>
-
           </div>
           <Footer PostHotelByIdHotel={PostHotelByIdHotel} />
              </div>
