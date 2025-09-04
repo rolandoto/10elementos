@@ -35,7 +35,7 @@ const Home =() =>{
     window.scrollTo(0, 0);
 }, []);
 
-  Usetitle({title:"Gallery Hotel - En el corazón de Medellín"})
+  Usetitle({title:"Amor y amistad -10% Hotel Gallery | Reserva Ya"})
   const {getCartSubtotal} = UseCart()
   const {hotelList,loadingHotel,errorHotel}= useSelector((state) => state.Hotel)
   const {getListHotel} =UseHotelActions()
