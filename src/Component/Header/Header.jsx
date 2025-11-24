@@ -25,9 +25,7 @@ const Header =({scrollToRoomSectionEvent}) =>{
                     </div>
 
                     <div className=" hidden lg:block   space-x-4">
-                        <Link to="/" className="text-white cursor-pointer text-[16px] font-normal  hover:text-[#ff7a45]"  >Inicio</Link>
-                        <Link to="/Events" className="text-white cursor-pointer text-[16px] font-normal hover:text-[#ff7a45]"   >Próximos eventos</Link>
-                        <Link to="/Accomodation" className="text-white  cursor-pointer text-[16px] font-normal hover:text-[#ff7a45]"  >Reservas</Link>
+                       
                     </div>
                     <div className="hidden lg:block " >
                         <a 
@@ -63,15 +61,7 @@ const Header =({scrollToRoomSectionEvent}) =>{
             </div>
 
            {menuOpen &&  <div className="lg:hidden flex flex-col mt-4 space-y-2">
-                            <Link to="/" className="text-white text-[16px] font-normal  hover:text-[#ff7a45]" >
-                                Inicio
-                            </Link>
-                            <Link to="/Events" className="text-white text-[16px] font-normal  hover:text-[#ff7a45]"  >
-                                Próximos eventos
-                            </Link>
-                            <Link  to="/Accomodation" className="text-white text-[16px] font-normal  hover:text-[#ff7a45]" >
-                                Reservas
-                            </Link>
+                           
                             <a  target="_blank"
                                 href="https://www.google.com/maps/dir//Gallery+Hotel+Medell%C3%ADn,+Cl.+47+%2341-55,+La+Candelaria,+Medell%C3%ADn,+La+Candelaria,+Medell%C3%ADn,+Antioquia/@6.2405494,-75.5638233,14z/data=!4m9!4m8!1m0!1m5!1m1!1s0x8e4428575a0dc0d1:0xbc26f43cbd055cc8!2m2!1d-75.5631796!2d6.2437756!3e0?entry=ttu"
                                 className="text-white bg-orange-500 w-full p-4 rounded hover:bg-orange-600"   

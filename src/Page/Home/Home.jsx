@@ -24,8 +24,6 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import Usetitle from "../../Hooks/Usetitle";
-import SubscriptionPopup from "../../Component/SubscriptionPopup/SubscriptionPopup";
-
 const Home =() =>{
   const navigate = useNavigate();
   moment.locale('es');
@@ -59,7 +57,6 @@ const Home =() =>{
 	}
 	
 	const hotel = hotelList.find(FindIdHotel)
-
 
 const subtotal = getCartSubtotal()
 
@@ -252,17 +249,11 @@ const subtotal = getCartSubtotal()
       }
     ];
   
-    /**
-     * 
-     *   
-     * 
-     */
-
+  
     return (
         <div>
           {FillContent}
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
-             <SubscriptionPopup />
            <div className="relative bg-cover bg-center h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp)`,}}>
             <div className="absolute inset-0 bg-black opacity-50"></div>

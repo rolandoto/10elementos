@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import  {useEffect, useState} from 'react';
 import UseCart from "../../Hooks/UseCart"
 import useReservationCreate from '../../Actions/useReservationCreate';
 import { useSelector } from 'react-redux';
@@ -10,26 +10,25 @@ import useFormValues from '../../Hooks/useFormValues';
 import useFetchData from '../../Hooks/useFetchData';
 import useValidation from '../../Hooks/ValidateFormValues';
 import FormCheckout from '../../Component/FormCheckout/FormCheckout';
-import Footer from '../../Component/Footer/Footer';
 import ConfirmationMessage from '../../Component/ConfirmationMessage/ConfirmationMessage';
 import WhatsappButton from '../../Component/WhatsappButton/WhatsappButton';
 import { Environment } from '../../Config/Config';
-import Usetitle from '../../Hooks/Usetitle';
 import HeaderStep from '../../Component/Header/HeaderStep';
+import Footer from '../../Component/Footer/Footer';
+import useFormValuesPse from '../../Hooks/useFormValuesPse';
+import useValidationPse from '../../Hooks/ValidateFormValuesPse';
 
 const Checkout  =() =>{
     useFetchData();
-
     useEffect(() => {
-        // Scrolls to the top of the document on component mount
         window.scrollTo(0, 0);
     }, []);
-
     const [formErrors, setFormErrors] = useState({});
     const [formValues, handleChange] = useFormValues();
+    const [formValuesPse, handleChangePse] = useFormValuesPse();
     const {cart,getCartSubtotal} = UseCart()
     const subtotal = getCartSubtotal()
-    const {PostCreateHotel} =useReservationCreate()
+    const {PostCreateHotel,PostCreateHotelPse} =useReservationCreate()
     const {Country,loading,reservation}= useSelector(state => state.Reservation);
     const {loadingCart} = useSelector(state => state.Cart);
     const cardNumberArray = formValues.cardNumber.split(" ");
@@ -37,12 +36,14 @@ const Checkout  =() =>{
     const now = moment().format('YYYY-MM-DD HH:mm:ss');
 
     const validate = useValidation();
+    const validatePse = useValidationPse();
+    const [paymentMethod, setPaymentMethod] = useState('PSE');
 
     const Rooms = cart.map(item => ({
         "roomTypeID": item.roomTypeID,
-        "quantity": item.quantity
+        "quantity": item.quantity,
+        "rateID": 2550029,
     }));
-
 
     const adults = cart.map(item => ({
         "roomTypeID": item.roomTypeID,
@@ -53,7 +54,7 @@ const Checkout  =() =>{
         "roomTypeID": item.roomTypeID,
         "quantity": 0
     }));
-    
+
     const night = cart.map(item => ({
         startDate: item?.startDate,
         endDate: item?.endDate,
@@ -68,49 +69,57 @@ const Checkout  =() =>{
   
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const errors = validate(formValues);
-        setFormErrors(errors);
-        if (Object.keys(errors).length === 0) {
-        await PostCreateHotel({ propertyID:Environment.propertyID,
-                                token:Environment.Token,
-                                startDate:StartDate,
-                                endDate:EndDate,
-                                promoCode:validCode,
-                                guestFirstName:formValues.name,
-                                guestLastName:formValues.apellido,
-                                guestEmail:formValues.email,
-                                guestPhone:formValues.phone,
-                                rooms:Rooms,
-                                adults:adults,
-                                children:childreen,
-                                dateCreated:now,
-                                number:cardNumberString,
-                                exp_month:formValues.expiryMonth,
-                                exp_year:formValues.expiryYear,
-                                cvc:formValues.cvc,
-                                card_holder:formValues.cardName,
-                                subtotal:subtotalPayment
-                            })} 
-    
+        if(paymentMethod=="PSE"){
+            const errors = validatePse(formValuesPse);
+            setFormErrors(errors);
+            if (Object.keys(errors).length === 0) {
+                await PostCreateHotelPse({ propertyID:Environment.propertyID,
+                            token:Environment.Token,
+                            promoCode:validCode,
+                            startDate:StartDate,
+                            endDate:EndDate,
+                            guestFirstName:formValuesPse.name,
+                            guestLastName:formValuesPse.apellido,
+                            guestEmail:formValuesPse.email,
+                            guestPhone:formValuesPse.phone,
+                            rooms:Rooms,
+                            adults:adults,
+                            children:childreen,
+                            dateCreated:now,
+                            bank:formValuesPse.banks,
+                            subtotal:subtotalPayment
+                        })}    
+        }else if(paymentMethod=="CREDITO"){
+            const errors = validate(formValues);
+            setFormErrors(errors);
+            if (Object.keys(errors).length === 0) {
+            await PostCreateHotel({ propertyID:Environment.propertyID,
+                                    token:Environment.Token,
+                                    promoCode:validCode,
+                                    startDate:StartDate,
+                                    endDate:EndDate,
+                                    guestFirstName:formValues.name,
+                                    guestLastName:formValues.apellido,
+                                    guestEmail:formValues.email,
+                                    guestPhone:formValues.phone,
+                                    rooms:Rooms,
+                                    adults:adults,
+                                    children:childreen,
+                                    dateCreated:now,
+                                    number:cardNumberString,
+                                    exp_month:formValues.expiryMonth,
+                                    exp_year:formValues.expiryYear,
+                                    cvc:formValues.cvc,
+                                    card_holder:formValues.cardName,
+                                    subtotal:subtotalPayment
+                                })}    
+            }
     };
-
-
-
-
-
-    /*const togglePanel = () => {
-      setIsOpen(!isOpen);
-    };
-*/
-
-
-
-
 
     const FillContent =() =>{
 
         if(Boolean(reservation)){
-            return ( <ConfirmationMessage title={"Tu reserva ha sido creada"} />)
+            return ( <ConfirmationMessage title={"Reserva creada"} />)
         }
 
         if(!subtotal > 0){
@@ -125,19 +134,22 @@ const Checkout  =() =>{
                       formValues={formValues}
                       cart={cart}
                       subtotal={subtotal}
+                      handleChangePse={handleChangePse}
+                      formValuesPse={formValuesPse}
+                      paymentMethod={paymentMethod}
+                      setPaymentMethod={setPaymentMethod}
                 />
         }
     }
 
-
     return (<>
-        {loadingCart && <LoadingOverlay title={"Cargando..."} />}
-        {loading && <LoadingOverlay title={"Creando reserva..."} />}  
-        <WhatsappButton />
-        <HeaderStep currentStep={2} />
-        <Toaster position="bottom-right"  richColors   />  
-        {FillContent()}
-        <Footer />
+            {loadingCart && <LoadingOverlay title={"Cargando..."} />}
+            {loading && <LoadingOverlay title={"Creando reserva..."} />} 
+            <WhatsappButton /> 
+            <HeaderStep currentStep={2} />
+            <Toaster position="bottom-right"  richColors   />  
+            {FillContent()}
+            <Footer />
             </>)
 
 }
